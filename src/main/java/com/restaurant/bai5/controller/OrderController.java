@@ -60,7 +60,7 @@ public class OrderController {
         return "order-result";
     }
 
-    @DeleteMapping("/{id}") // em test DELETE nhưng bị lỗi 405 ạ :, ) em không tìm ra cách để test ạ mong thầy hướng dẫn
+    @DeleteMapping("/{id}")
     public String cancelOrder(@PathVariable("id") int id, ModelMap model) {
         String result = orderService.cancelOrder(id);
         model.addAttribute("message", result);
